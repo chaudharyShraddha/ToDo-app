@@ -1,0 +1,16 @@
+
+<div class="container">
+    <h1>To-Do list</h1><hr>
+
+    <form action="/" method="POST">
+        <input type="text" placeholder="Add new item..." name="todo" required>
+        <button type="submit">Add Items</button>
+    </form>
+
+    <ul>
+        {{#each data}}
+           <li> <a href="/delete/{{this.id}}">{{this.todo}}</a></li>
+        {{/each}}
+    </ul>
+    
+</div>
